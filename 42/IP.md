@@ -5,11 +5,7 @@ aliases:
   - Interne
   - Internet Protocol
 ---
-Il y a quatre types d'adresses IP :
-- Publique
-- Privée
-- Statique
-- Dynamique
+Chaque adresse est unique à l'appareil auquel elle est assignée.
 # Les différents types d'adresses IP
 ## Publique
 Adresse utilisée à l'extérieur d'un réseau.
