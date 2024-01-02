@@ -11,46 +11,40 @@
             "id": "f2d2aa6f08a76fcb",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "a8fd9c095c1f0624",
-            "type": "leaf",
-            "state": {
               "type": "markdown",
               "state": {
-                "file": "get_next_line.md",
+                "file": "Minitalk/Signals.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "78df82b32f3d7910",
+            "id": "4b3590d7a3860453",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "IP.md",
+                "file": "Minitalk/Sigaction.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "1df420d454f62bb4",
+            "id": "0d3dec16a9bcfa3b",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.5.3"
+                "file": "Minitalk/Signals.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -116,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "IP.md",
+                "file": "Minitalk/Signals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "IP.md",
+                "file": "Minitalk/Signals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "IP.md"
+                "file": "Minitalk/Signals.md"
               }
             }
           }
@@ -177,8 +171,12 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "1df420d454f62bb4",
+  "active": "0d3dec16a9bcfa3b",
   "lastOpenFiles": [
+    "Minitalk/Two way conversion characters binary.md",
+    "Minitalk/Sigaction.md",
+    "Minitalk/Signals.md",
+    "Minitalk",
     "get_next_line.md",
     "IP.md"
   ]
