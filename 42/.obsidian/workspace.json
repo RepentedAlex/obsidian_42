@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Minitalk/Signals.md",
+                "file": "Minitalk/Two way conversion characters binary.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Minitalk/Signals.md",
+                "file": "Minitalk/Two way conversion characters binary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Minitalk/Signals.md",
+                "file": "Minitalk/Two way conversion characters binary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Minitalk/Signals.md"
+                "file": "Minitalk/Two way conversion characters binary.md"
               }
             }
           }
@@ -173,9 +173,9 @@
   },
   "active": "0d3dec16a9bcfa3b",
   "lastOpenFiles": [
+    "Minitalk/Signals.md",
     "Minitalk/Two way conversion characters binary.md",
     "Minitalk/Sigaction.md",
-    "Minitalk/Signals.md",
     "Minitalk",
     "get_next_line.md",
     "IP.md"
