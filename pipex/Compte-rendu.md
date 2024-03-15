@@ -31,7 +31,7 @@ Le PATH est une liste de dossiers separes par un caractere particulier (`:` sur 
 Dans ce schema:
 1. Lorsque l'on invoque une commande `program_name` dans le terminal, le systeme d'exploitation cherche une correspondance dans les dossiers listes dans le PATH.
 2. Le PATH contient une liste de dossiers tels que `/bin`, `/usr/bin` et `usr/local/bin` (dans un systeme UNIX).
-3. Le systeme d'exploitation cherche sequentiellement un executable nomme `program_name` dans chacun des dossiers.
+3. Le système d'exploitation cherche sequentiellement un executable nomme `program_name` dans chacun des dossiers.
 4. Si l'executable est trouve (par exemple: `prog1` dans `/bin` ou `prog2` dans `/usr/bin`), il est execute. Sinon, la recherche continue dans le prochain dossier liste dans le PATH.
 5. Si l'executable n'est dans aucun des dossiers listes dans le PATH, le terminal renvoie une erreur de type 'command not found'.
 
@@ -196,3 +196,151 @@ En general l'appel système `fork()` est utilise dans divers scenarios, tels que
 
 N.B: Apres l'appel `fork()`, le parent et l'enfant partagent certaines ressources telles que les descripteurs de fichiers ouverts, les gestionnaires de signaux et les autres attributs de processus. Une gestion méticuleuse des ressources et du cleanup est vitale pour éviter des problèmes comme la corruption de données ou les fuites de ressources.
 # dup2()
+L'appel système `dup2()` en C est utilise pour dupliquer un descripteur de fichier existant vers un autre descripteur de fichier. Il est communément utilisé dans des cas ou l'on a besoin de rediriger le d'entree, de sortie (par exemple: l'entree standard, la sortie standard, l'erreur standard) vers ou depuis des fichiers, des pipes ou d'autres descripteurs de fichiers.
+
+Voici la syntaxe de la fonction `dup2()`:
+``` C
+#include <unistd.h>
+
+int dup2(int oldfd, int newfd);
+```
+La fonction `dup2()` prend deux arguments:
+1. `oldfd`: Le descripteur de fichier qui doit être duplique
+2. `newfd`: La valeur du nouveau descripteur de fichier après la duplication.
+
+La fonction `dup2()` fonctionne comme suit:
+1. Si `newfd` est déjà ouvert, il est d'abord fini.
+2. Le descripteur de fichier `oldfd` est duplique et assigne a la variable `newfd`.
+3. Apres l'appel a `dup2()`, le `oldfd` et le `newfd` se referent au meme descripteur de fichier et partagent la meme file offset.
+La fonction retourne le nouveau descripteur de fichier (`newfd`) en cas de succès ou `-1` en cas d'erreur (auquel cas la variable globale `errno` est initialisée pour indiquer l'erreur).
+
+Voici un schema du fonctionnement de `dup2()`:
+```
+Before dup2():
+
++---------------+             +---------------+
+|   File        |             |   File        |
+|   Descriptor  |             |   Descriptor  |
+|   (oldfd)     |             |   (newfd)     |
++---------------+             +---------------+
+        |                             |
+        |                             |
+        v                             v
++---------------+             +---------------+
+|   Open File   |             |   Open File   |
+|   Description |             |   Description |
++---------------+             +---------------+
+
+After dup2(oldfd, newfd):
+
++---------------+             +---------------+
+|   File        | --------->  |   File        |
+|   Descriptor  |             |   Descriptor  |
+|   (oldfd)     |             |   (newfd)     |
++---------------+             +---------------+
+        |                             |
+        |                             |
+        v                             v
++---------------------------------------------+
+|                  Open File                  |
+|                 Description                 |
++---------------------------------------------+
+```
+Un usage commun de `dup2()` est de rediriger les flux de l'entree/sortie/erreur standard. Par exemple, pour rediriger la sortie standard vers un fichier, on peut utiliser `dup2()` comme suit:
+``` C
+#include <unistd.h>
+#include <fcntl.h>
+
+int main() {
+    int fd = open("output.txt", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+    if (fd == -1) {
+        // Handle error
+    }
+
+    if (dup2(fd, STDOUT_FILENO) == -1) {
+        // Handle error
+    }
+
+    // From this point on, any output to standard output (stdout) will be written to output.txt
+    printf("This will be written to output.txt\n");
+
+    close(fd);
+    return 0;
+}
+```
+Dans cet exemple:
+1. L'appel `open()` est utilise pour créer ou tronquer le fichier "output.txt" pour écrire.
+2. La fonction `dup2()` est appelée pour dupliquer le descripteur de fichier `fd` (qui pointe sur "output.txt") vers la valeur descripteur de fichier de `STDOUT_FILENO` (qui représente la sortie standard).
+3. Apres l'appel a `dup2()`, n'importe quelle sortie écrite vers `stdout` (par exemple: utiliser `printf()`) sera redirige vers le fichier "output.txt".
+L'appel système `dup2()` est aussi utilise communément en combinaison avec l'appel système `pipe()` pour faire de la communication inter-processus (IPC) et des scenarios de redirection de processus.
+# execve()
+L'appel système `execve()` en C est utilise pour exécuter un programme ou une commande dans le système d'exploitation. Cette fonction fait partie de la famille des fonctions `exec`, qui remplacent l'image actuelle du processus avec une nouvelle image. Cela signifie que le processus qui fait l'appel est termine pour laisser place a un nouveau processus créé avec le programme ou la commande spécifiée.
+
+Voici la syntaxe de la fonction `execve()`:
+``` C
+#include <unistd.h>
+
+int execve(const char *path, char *const argv[], char *const envp[]);
+```
+La fonction `execve()` prend trois arguments:
+1. `path`: Une chaîne de caractères représentant le chemin de l'executable a exécuter.
+2. `argv`: Un tableau de chaînes de caractères qui contient la liste des arguments pour le nouveau programme. Le premier argument (`argv[0]`) doit être le nom du programme.
+3. `envp`: Un tableau de chaînes de caractères représentant les variables d'environnement a passer au nouveau programme.
+
+Si `execve()` s'execute sans problèmes, il ne retourne pas au processus appellant. A la place, le processus appellant est remplace par le nouveau programme et ce dernier commence a s’exécuter depuis son point d'entree (la fonction `main()` en C).
+Si `execve()` échoue, il retourne `-1` et la variable globale `errno` est initialisée pour indiquer l'erreur. Dans ce cas, le processus appellant continue a s’exécuter après l'appel a `execve()`.
+
+Voici un schema du fonctionnement d'`execve():
+```
++---------------+
+|   Process A   |
+|               |
+| execve(path,  |
+|        argv,  |
+|        envp)  |
+|               |
++---------------+
+        |
+        | (replaces current process image)
+        v
++---------------+
+|   Process B   |
+| (New Program) |
+|               |
++---------------+
+```
+Dans ce schéma, Process A appelle `execve()` avec le chemin vers le nouveau programme, ses arguments (`argv`) et ses variables d'environnement (`envp`). Le système d'exploitation crée ensuite un nouveau processus, Process B, en chargeant le programme spécifié dans la mémoire et en remplacant son image de processus actuelle (Process A) avec le nouveau programme.
+
+Voici un exemple de comment utiliser `execve()` en C:
+``` C
+#include <unistd.h>
+#include <stdio.h>
+
+int main() {
+    char *args[] = {"ls", "-l", NULL};
+    char *env[] = {NULL};
+
+    if (execve("/bin/ls", args, env) == -1) {
+        perror("execve");
+        return 1;
+    }
+
+    // This line will never be reached if execve() is successful
+    printf("This line will not be printed\n");
+
+    return 0;
+}
+```
+Dans cet exemple:
+1. Le tableau `args` est initialisé avec les arguments à passer au nouveau programme (`ls -l`). Le dernier argument doit être `NULL` pour indiquer la fin de la liste d'arguments.
+2. Le tableau `env` est initialisé avec un seul pointeur sur `NULL`, indiquant que le nouveau programme doit hériter des variables d'environnement du processus faisant l'appel.
+3. La fonction `execve()` est appelée avec le chemin vers la commande `ls` (`/bin/ls`), le tableau `args` et le tableau `env`.
+4. Si `execve()` se déroule sans accrocs, le processus appellant est remplacé par la commande `ls` et la sortie du programme sera affichée sur la sortie standard.
+5. Si `execve()` échoue, la fonction `perror()` est appelée pour afficher le message d´erreur et le programme quitte avec un statut non-nul.
+
+L'appel système `execve()` est communément utilisé dans divers scénarios, tels que:
+- Exécuter des programmes externes ou des commandes depuis un programme en C.
+- Implémenter des fonctionnalités du [[shell]] ou des interprétateurs en ligne de commandes.
+- Construire des systèmes de gestion de processus plus complexes ou hiérarchiser les processus.
+
+N.B: Après une exécution réussie d'`execve()`, le processus appellant n'existe plus et le nouveau programme s'approprie ses espaces mémoires et ses ressources. De ce fait, les tâches de cleanup ou de gestion de ressources devraient être exécutées avant d'appeler `execve()`.
