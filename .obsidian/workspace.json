@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bf5ce1e7ceb1f9ce",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Born2beRoot/Préparation correction.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pipex/Compte-rendu.md",
+                "file": "Born2beRoot/Préparation correction.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pipex/Compte-rendu.md",
+                "file": "Born2beRoot/Préparation correction.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pipex/Compte-rendu.md"
+                "file": "Born2beRoot/Préparation correction.md"
               }
             }
           }
@@ -146,8 +159,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "efbab9355aef4eac",
+  "active": "bf5ce1e7ceb1f9ce",
   "lastOpenFiles": [
+    "pipex/Compte-rendu.md",
+    "Born2beRoot/Préparation correction.md",
+    "Born2beRoot",
     "Fonctions"
   ]
 }
