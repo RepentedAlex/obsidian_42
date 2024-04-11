@@ -22,7 +22,26 @@ L'hyperviseur est responsable de l'efficacite du partage et de l'allocation des 
 #### Snapshots et Live Migration
 La plupart des plateformes de virtualisation supportent des fonctionnalites telles que les snapshots et la Live migration. Les snapshots permettent de capturer l'etat complet d'une VM a un instant T, ce qui peut etre utile pour faire une backup ou restaurer une installation. La Live migration permet de migrer une VM live d'un host a un autre sans devoir l'arreter, ce qui est pratique pour equilibrer la workload ou en cas de maintenance.
 ### Le choix de l'OS
+
 ### Les grandes differences entre Rocky Linux et Debian
+#### Philosophie
+- Rocky Linux: RL est une distribution centree sur la communaute plutot orientee pour les entreprises. Cette distribution est compatible avec les binaires de Red Hat Enterprise Linux. Son objectif premier est d'offrir stabilite, reliability et compatibilite avec des applications pouvant satisfaire des demandes d'entreprises.
+- Debian: Debian est une distribution centree sur la communaute, gratuite et open-source connue pour son adherence aux principes des logiciels gratuits et son commitment a la stabilite et a la securite.
+#### Gestion des paquets
+- Rocky Linux: Rocky Linux utilise le systeme de gestion de paquets RPM, aussi utilise par RHEL, il fournit les gestionnaire de paquets `yum` et `dnf`.
+- Debian: Debian utilise le format de paquets `.deb` et Advanced Package Tool (APT) pour la gestion des paquets, ce qui inclut `apt-get` et `apt`.
+#### Release cycle
+- Rocky Linux: RL a un rythme de releases plutot lent, une nouvelle version majeure sort plusieurs annees apres la derniere release. Cela permet de mettre l'accent sur la stabilite et la compatibilite.
+- Debian: Debian quant a lui a un rythme de release plus soutenu, une version majeure tous les 2/3 ans. De plus Debian a des branches testing et unstable qui sont mis a jour plus frequemment.
+#### Communaute et support
+- Rocky Linux: RL est plutot recente mais herite de l'ecosysteme de RHEL, qui dispose de support commercial de plusieurs vendeurs.
+- Debian: Debian dispose d'une communaute tres large, donc d'une enorme documentation disponible via internet.
+#### Software repository
+- Rocky Linux: Le software repository de RL est compatible avec RHEL, ce qui donne acces a beaucoup de logiciels compatible a une utilisation en entreprise.
+- Debian: Debian offre une bibliotheque logicielle contenant plus de 59.000 paquets, dont une large selection de logiciels open-source.
+#### Desktop environment
+- Rocky Linux: RL est plutot concentree sur une utilisation serveur/entreprise, meme si elle peut etre utilisee avec un environnement bureau si desire.
+- Debian: Debian offre plusieurs environnements bureaux, tels que GNOME, KDE, Xcfe ou LXDE, ce qui la rend adequate a des utilisations bureautiques ou serveurs.
 ### Les avantages d'une VM
 ### Qu'est-ce que SELinux ?
 ### Qu'est-ce que DNF ?
