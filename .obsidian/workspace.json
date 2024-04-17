@@ -11,8 +11,12 @@
             "id": "e3243118907331af",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Voyages/Nantes - Hendaye.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -76,11 +80,75 @@
         "type": "tabs",
         "children": [
           {
+            "id": "7620ada7d9d24f02",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "b58f452af0ebf46d",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "Voyages/Nantes - Hendaye.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1.2002079439702367,
+                  "close": true
+                }
+              }
+            }
+          },
+          {
+            "id": "02b6d63b9fd4573b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Voyages/Nantes - Hendaye.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "e050491ef5b7b8b6",
+        "type": "tabs",
+        "children": [
+          {
             "id": "af9a4a7553bffda0",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Voyages/Nantes - Hendaye.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,36 +165,18 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Voyages/Nantes - Hendaye.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
-          },
-          {
-            "id": "7620ada7d9d24f02",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true
-              }
-            }
-          },
-          {
-            "id": "02b6d63b9fd4573b",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {}
-            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -138,7 +188,7 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "78d8703aa81d0fcf",
+  "active": "e3243118907331af",
   "lastOpenFiles": [
     "Voyages/Nantes - Hendaye.md",
     "Voyages"
