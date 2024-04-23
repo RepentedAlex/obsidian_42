@@ -37,14 +37,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Born2beRoot.md",
+                "file": "Common Core/Born2beRoot/Born2beRoot.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e65c2666ebb5a177",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "42/TTY.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -121,7 +133,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Born2beRoot.md",
+                "file": "42/TTY.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -156,7 +168,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Born2beRoot.md"
+                "file": "42/TTY.md"
               }
             }
           }
@@ -173,7 +185,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Born2beRoot.md",
+                "file": "42/TTY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +202,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Born2beRoot.md",
+                "file": "42/TTY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -213,10 +225,11 @@
       "command-palette:Ouvrir la palette de commandes": false
     }
   },
-  "active": "8bf6b70bc0f7afec",
+  "active": "e65c2666ebb5a177",
   "lastOpenFiles": [
+    "Common Core/Born2beRoot/Born2beRoot.md",
+    "42/TTY.md",
     "42/IP.md",
-    "Born2beRoot.md",
     "README.md",
     "Voyages/Bikepacking setups.md",
     "Common Core",
