@@ -87,7 +87,7 @@
               "state": {
                 "file": "push_swap/Compte-rendu push_swap.md",
                 "collapseAll": false,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -129,12 +129,12 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,11 +148,11 @@
   },
   "active": "6bfe7bd6780a3dd8",
   "lastOpenFiles": [
-    "Introduction C++ bgoulard.md",
-    "push_swap/Compte-rendu push_swap.md",
-    "Born2beRoot/Préparation correction.md",
-    "push_swap",
     "pipex/Compte-rendu.md",
+    "Born2beRoot/Préparation correction.md",
+    "push_swap/Compte-rendu push_swap.md",
+    "Introduction C++ bgoulard.md",
+    "push_swap",
     "Born2beRoot",
     "Fonctions"
   ]

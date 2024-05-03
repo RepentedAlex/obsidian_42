@@ -97,7 +97,10 @@ Le parsing doit donc découper cet argument comme suit:
 | `./push_swap` | `2`      | `1`      | `3`      | `6`      | `5`      | `8`      |
 ### Création de la pile A
 >Le premier paramètre donné en commande doit être au sommet de la pile !
+
+Pour générer notre pile A, nous itérons à travers les arguments et à chaque fois on add back. De cette manière, notre dernier argument sera le dernier élément de la liste chaînée, c'est-à-dire qu'il sera en bas de notre pile.
 ### Création de la pile B
+	La stack B étant vide au début de notre processus, on initialise simplement notre `t_stack *stack_b` à `NULL`.
 ### Mise en place des instructions
 #### sa (swap a)
 #### sb (swap b)

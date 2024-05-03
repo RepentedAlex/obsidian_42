@@ -39,7 +39,7 @@ Le PATH aide les utilisateurs a execute des programmes sans avoir a specifier le
 
 N.B: Le PATH est habituellement configure durant l'installation du systeme d'exploitation, cependant les utilisateurs (surtout les developpeurs et les administrateurs systemes) peuvent le modifier pour ajouter ou retirer des dossiers selon les besoins.
 # pipe()
-La fonction `pipe()` en C est un [[appel systeme]] utilise pour faire de la [[communication inter-processus]] (IPC). Elle cree un pipe, c'est-a-dire un canal de donnees unidirectionnel qui permet un flux de donnees d'un processus a un autre. Le pipe agit comme un [[buffer]], permettant au processus expediteur d'ecrire des donnees dedans puis au processus destinataire de lire les donnees dudit buffer.
+La fonction `pipe()` en C est un [[appel système]] utilise pour faire de la [[communication inter-processus]] (IPC). Elle crée un pipe, c'est-a-dire un canal de données unidirectionnel qui permet un flux de données d'un processus a un autre. Le pipe agit comme un [[buffer]], permettant au processus expéditeur d’écrire des données dedans puis au processus destinataire de lire les données dudit buffer.
 
 Voici la syntaxe de la fonction `pipe()`:
 ``` C
@@ -62,7 +62,7 @@ Voici un schema:
 |               |       |               |
 +---------------+       +---------------+
 ```
-Le flux de donnes du pipe est unidirectionnel, ce qui veut dire que les donnees ne peuvent se deplacere que de la tete d'ecriture vers la tete de lecture. Le pipe agit comme un [[buffer|tampon]], ce qui permet au processus expediteur d'ecrire des donnees dedans et au processus receveur de lire son contenu.
+Le flux de donnes du pipe est unidirectionnel, ce qui veut dire que les donnees ne peuvent se déplacer que de la tête d'écriture vers la tête de lecture. Le pipe agit comme un [[buffer|tampon]], ce qui permet au processus expéditeur d'écrire des données dedans et au processus receveur de lire son contenu.
 
 Voici un exemple d'utilisation d'un pipe pour communiquer entre deux processus en C:
 ``` C

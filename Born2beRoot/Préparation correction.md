@@ -44,13 +44,43 @@ La plupart des plateformes de virtualisation supportent des fonctionnalites tell
 - Debian: Debian offre plusieurs environnements bureaux, tels que GNOME, KDE, Xcfe ou LXDE, ce qui la rend adequate a des utilisations bureautiques ou serveurs.
 ### Les avantages d'une VM
 ### Qu'est-ce que SELinux ?
+Security-Enhanced Linux (SELinux) est une architecture de sécurité pour Linux qui permet aux admins de mieux contrôler les accès au système. 
 ### Qu'est-ce que DNF ?
-## Simple configuration
+`dnf` (DaNdified Yum) est un [[Gestionnaire de paquets|gestionnaire de paquets]] qui reprend le fonctionnement de `yum`.
 ## User
+### Création d'un nouveau user
+#### Expliquer comment a été mise en place la politique de mdp
+##### Modif fichier 1
+##### Modif fichier 2
+### Création d'un nouveau groupe
+### Assignation du nouvel user au groupe
+### Pourquoi mettre en place une politique de mdp stricte
+#### Avantages
+#### Désavantages
 ## Hostname and partitions
+### Comment afficher les partitions de la VM
+lsblk
+### Comment fonctionne LVM
+#### Avantages de LVM
 ## SUDO
+### Montrer comment assigner un user au groupe sudo
+### Objectif et fonctionnement de sudo
+### Le logging des commandes lancées avec sudo
 ## UFW / Firewalld
+### Fonctionnement et but d'un firewall
+
+### Suppression de la règle pour le port 8080
 ## SSH
+### Fonctionnement et importance du SSH
 ## Script monitoring
+### Expliquer fonctionnement du script
+### Explication du fonctionnement de cron
+#### Syntaxe
+`1 2 3 4 5` = À 02h01, le 3 avril et les jeudi en avril
+`0 0,12 1 */2 *` = À 00h00 et 12h00, le premier de chaque second mois
+`[minute] [hour] [day (month)] [month] [day (week)]`
 # Bonus
 ## Bonus
+### Setup du wordpress avec une stack LLMP (Linux - Lighttpd - MariaDB - PHP)
+### Service au choix : fail2ban
+#### Pourquoi fail2ban
