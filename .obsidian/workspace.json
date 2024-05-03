@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b4a56438b7fef0a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "push_swap/Compte-rendu push_swap.md",
+                "file": "conflict-files-obsidian-git.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "push_swap/Compte-rendu push_swap.md",
+                "file": "conflict-files-obsidian-git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "push_swap/Compte-rendu push_swap.md"
+                "file": "conflict-files-obsidian-git.md"
               }
             }
           }
@@ -146,11 +159,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6bfe7bd6780a3dd8",
+  "active": "b4a56438b7fef0a2",
   "lastOpenFiles": [
+    "push_swap/Compte-rendu push_swap.md",
+    "conflict-files-obsidian-git.md",
+    "Voyages/Nantes - Hendaye.md",
+    "Voyages/Bikepacking setups.md",
+    "Voyages",
+    "Pasted image 20240419012627.png",
+    "Common Core/Minitalk/Two way conversion characters binary.md",
+    "Common Core/Minitalk/Signals.md",
+    "Common Core/Minitalk/Sigaction.md",
+    "Common Core/Born2beRoot/Born2beRoot.md",
+    "Common Core/get_next_line.md",
+    "Common Core/Minitalk",
+    "Common Core/Born2beRoot",
+    "Common Core",
+    "42/TTY.md",
+    "42/Exclusion mutuelle.md",
     "pipex/Compte-rendu.md",
     "Born2beRoot/Préparation correction.md",
-    "push_swap/Compte-rendu push_swap.md",
     "Introduction C++ bgoulard.md",
     "push_swap",
     "Born2beRoot",
