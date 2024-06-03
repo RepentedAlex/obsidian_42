@@ -1,0 +1,2 @@
+# Best practices
+Il est important de passer un double pointeur (`**head` ou `**tail`) lorsque l'on veut réaliser des opérations au niveau de la liste en elle-même. On passera alors un pointeur simple dans les cas où on réalisera des opérations à l'échelle d'un seul nœud.
