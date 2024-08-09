@@ -4,69 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "25606ea7b81f857c",
+        "id": "2d23395d3db48fab",
         "type": "tabs",
         "children": [
           {
-            "id": "6bfe7bd6780a3dd8",
+            "id": "7e986084a26673f1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "push_swap/Compte-rendu push_swap.md",
+                "file": "philosophers/threads.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "b4a56438b7fef0a2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "push_swap/Compte-rendu push_swap.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0dc7e91250230f5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "push_swap/Compte-rendu push_swap.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fc1c2aab826fda53",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Listes chaînées.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "09175c59904dd959",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.5.12"
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -132,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Listes chaînées.md",
+                "file": "philosophers/threads.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -149,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Listes chaînées.md",
+                "file": "philosophers/threads.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Listes chaînées.md"
+                "file": "philosophers/threads.md"
               }
             }
           }
@@ -193,12 +146,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "09175c59904dd959",
+  "active": "7e986084a26673f1",
   "lastOpenFiles": [
+    "Hooks.md",
+    "philosophers/threads.md",
+    "philosophers",
+    "42/Exclusion mutuelle.md",
+    "Compte-rendu so_long.md",
+    "conflict-files-obsidian-git.md",
+    "so_long",
     "push_swap/Compte-rendu push_swap.md",
     "Listes chaînées.md",
     "Plugins VSC.md",
-    "conflict-files-obsidian-git.md",
     "Voyages/Nantes - Hendaye.md",
     "Voyages/Bikepacking setups.md",
     "Voyages",
@@ -212,7 +171,6 @@
     "Common Core/Born2beRoot",
     "Common Core",
     "42/TTY.md",
-    "42/Exclusion mutuelle.md",
     "pipex/Compte-rendu.md",
     "Born2beRoot/Préparation correction.md",
     "Introduction C++ bgoulard.md",
